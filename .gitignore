@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+build/
+dist/
+
+# Editable install artifacts
+*.pth
+
+# Testing / tooling
+.pytest_cache/
+.hypothesis/
+.coverage
+htmlcov/
+
+# Editor
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local Claude config (not part of the project)
+.claude/

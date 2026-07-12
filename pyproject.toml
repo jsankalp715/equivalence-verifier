@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "legacy-equivalence-verifier"
+version = "0.1.0"
+description = "Find concrete inputs where two implementations of the same function behave differently."
+requires-python = ">=3.11"
+dependencies = [
+    "hypothesis>=6.100",
+    "click>=8.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+symbolic = ["z3-solver>=4.12", "crosshair-tool>=0.0.60"]
+
+[project.scripts]
+verify-equivalence = "verifier.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
