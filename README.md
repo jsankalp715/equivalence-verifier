@@ -123,6 +123,18 @@ project is trying to avoid.
   reach within budget
 - Non-deterministic implementations (concurrency, GC-order dependence)
 
+## Live demo
+
+Walk through the whole set with one command:
+
+```
+python scripts/run_demo.py           # all 5 cases, ~1 min end-to-end
+python scripts/run_demo.py --quick   # just the headline case, ~5 sec
+```
+
+Each case prints its full report, then a summary table lands at the bottom
+showing which phase caught which bug and how long each took.
+
 ## Demo results -- five seeded bug pairs
 
 Each example directory has `old.py`, `new.py`, `strategies.py`, `bounded.py`,
